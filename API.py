@@ -8,7 +8,7 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 API_KEY_PRIVATE = os.getenv("API_KEY_PRIVATE")
 TOKEN = os.getenv("TOKEN")
-TOKEN_PRIVATE = os.getenv("_PRIVATE")
+TOKEN_PRIVATE = os.getenv("TOKEN_PRIVATE")
 
 
 # Authenticate to Twitter
@@ -22,5 +22,5 @@ public_tweets = api.home_timeline()
 for tweet in public_tweets:
     print(f"{tweet.text} \n")
 
-api.update_status(i for i in [i for i in "hello"])
+api.update_status([i for i in "hello"])
 
